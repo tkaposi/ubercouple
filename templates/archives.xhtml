@@ -1,0 +1,15 @@
+{% extends 'layout.xhtml' %}
+{% import 'macros.xhtml' as macros %}
+
+{%- block title -%}
+Archives – {{ super() }}
+{%- endblock -%}
+
+{% block content %}
+<article class='archive'>
+    {%- for group in articles|groupby('published.year')|reverse %}
+    <h2>{{ group.grouper }}</h2>
+    {{ macros.render_article_list(group.list) }}
+    {%- endfor %}
+</article>
+{% endblock %}

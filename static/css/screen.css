@@ -1,0 +1,731 @@
+/* General Layout and Appearance */
+html {
+    background: url('../images/design/backdrop.svg') #eee8d5;
+    background-attachment: fixed;
+    font-family: Merriweather, serif;
+    font-size: 1.15rem;
+}
+
+body {
+    width: 90%;
+    max-width: 50em;
+    margin: 0 auto;
+    color: #333840;
+    font-family: Merriweather, serif;
+    line-height: 1.5;
+}
+
+/* Default Element Styles */
+main, article, section, aside, footer, nav {
+    display: block;
+}
+article::after {
+    display: block;
+    clear: both;
+    height: 0;
+    content: '\00a0';
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Lato, sans-serif;
+    font-weight: bold;
+}
+h1 {
+    font-weight: 900;
+}
+h2 {
+    margin: .2em 0 .6em;
+    font-size: 2em;
+    line-height: 1.2;
+}
+h3 {
+    margin: 1em 0 .5em;
+    font-size: 1.5em;
+}
+p {
+    margin: 1em 0;
+}
+ol, ul {
+    margin: 1em 0 1em 3em;
+}
+li {
+    position: relative;
+    margin: .5em 0;
+}
+li p {
+    margin: .5em 0;
+}
+ul li::before {
+    position: absolute;
+    top: .3em;
+    left: -1.4em;
+    height: .85rem;
+    width: 1rem;
+    background: url('../images/design/flower.svg') left center no-repeat;
+    background-size: contain;
+    content: '\00a0';
+}
+figure {
+    display: block;
+    position: relative;
+    float: right;
+    clear: right;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    border: 2px dashed #444;
+    padding: 1.5em;
+    padding-bottom: 4em;
+    background-color: #ede9e1;
+    box-shadow: 0 0 .5em -.1em rgba(0, 0, 0, .5);
+}
+figure.here {
+    display: table;
+    float: none;
+    clear: none;
+    margin: 1em auto;
+}
+figure::before {
+    position: absolute;
+    z-index: 1;
+    top: 1.5em;
+    right: 1.5em;
+    left: 1.5em;
+    bottom: 4em;
+    box-shadow: inset 0 0 .5em rgba(0, 0, 0, .4);
+    content: '\00a0';
+}
+figure img {
+    display: block;
+    max-width: 100%;
+}
+figcaption {
+    display: block;
+    position: absolute;
+    bottom: -1em;
+    right: 1.5em;
+    left: 1.5em;
+    height: 4em;
+    font-style: italic;
+    text-align: center;
+}
+table {
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: .3em;
+}
+td, th {
+    padding: .1em .5em .2em;
+    border-bottom: 1px solid #93a1a1;
+}
+th {
+    font-weight: bold;
+}
+blockquote {
+    position: relative;
+    margin: 1em 2em 1em 3em;
+    border-left: 3px solid #ede9e1;
+    padding-left: .5em;
+    font-style: italic;
+}
+blockquote::before {
+    position: absolute;
+    top: -.5rem;
+    left: -2.5rem;
+    color: #3b3874;
+    font-size: 3rem;
+    font-weight: bold;
+    content: '“';
+}
+a {
+    border-bottom: 1px dotted transparent;
+    text-decoration: none;
+    transition: background-color .3s ease,
+                border-color .3s ease;
+}
+a, a code {
+    color: #0726a6;
+}
+a:visited, a:visited code {
+    color: #062191;
+}
+a:hover {
+    border-bottom-color: #93a1a1;
+    background: #ede9e1;
+}
+a:active, a:active code {
+    color: #d33682;
+}
+em, i {
+    font-style: italic;
+}
+strong, b {
+    font-weight: bold;
+}
+small {
+    font-size: .8em;
+    font-style: italic;
+    font-weight: 300;
+}
+sup {
+    font-size: .65em;
+    vertical-align: super;
+}
+time {
+    white-space: nowrap;
+}
+code {
+    color: #b58900;
+    font-size: 1.15em;
+    line-height: 1.2;
+}
+code, pre {
+    font-family: Inconsolata, monospace;
+}
+blockquote code {
+    margin-right: .1em;
+    margin-left: .1em;
+}
+blockquote pre {
+    font-style: normal;
+}
+
+/* Header */
+header[role='banner'] {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 90%;
+    max-width: 50rem;
+    background: linear-gradient(
+        rgba(0, 0, 0, .0) 0%,
+        rgba(0, 0, 0, .0) 50%,
+        rgba(0, 0, 0, .30) 100%
+    );
+    background-color: #36336d;
+    font-family: Lato, sans-serif;
+    font-size: 1.5rem;
+}
+header[role='banner'] h1,
+header[role='banner'] nav,
+header[role='banner'] ul,
+header[role='banner'] li {
+    display: inline-block;
+}
+header[role='banner'] ul,
+header[role='banner'] li {
+    margin: 0;
+}
+header[role='banner'] li::before {
+    content: none;
+}
+header[role='banner'] a {
+    display: block;
+    padding: .75em;
+    border: 0;
+    color: #aeadc4;
+    text-decoration: none;
+    background: linear-gradient(
+        rgba(0, 0, 0, .0) 0%,
+        rgba(0, 0, 0, .0) 50%,
+        rgba(0, 0, 0, .30) 100%
+    );
+    background-color: #36336d;
+}
+header[role='banner'] a:hover {
+    border-bottom: 0;
+    background: linear-gradient(
+        rgba(0, 0, 0, .0) 0%,
+        rgba(0, 0, 0, .0) 50%,
+        rgba(0, 0, 0, .30) 100%
+    );
+    background-color: #3b3874;
+}
+header[role='banner'] h1 a {
+    padding: .75em 1.3em;
+}
+
+/* Main content area */
+main {
+    position: relative;
+    margin-top: 4.5em;
+    padding: 3em 3em 4em;
+    border-bottom-right-radius: .3em;
+    border-bottom-left-radius: .3em;
+    background: #ede9e1;
+}
+main::before {
+    position: absolute;
+    top: -4.5em;
+    bottom: .3em;
+    left: -.25rem;
+    width: .25rem;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, .0) 0%,
+        rgba(9, 3, 0, .06) 100%
+    );
+    content: '\00a0';
+}
+main::after {
+    position: absolute;
+    top: -3.75em;
+    bottom: .3em;
+    right: -.25rem;
+    width: .25rem;
+    background: linear-gradient(
+        to right,
+        rgba(9, 3, 0, .06) 0%,
+        rgba(0, 0, 0, .0) 100%
+    );
+    content: '\00a0';
+}
+main :target::before {
+    display: block;
+    height: 5rem;
+    margin-top: -5rem;
+    content: ' ';
+    visibility: hidden;
+}
+main a {
+    font-weight: bold;
+}
+main a.footnote-backref,
+main sup a {
+    font-weight: normal;
+}
+
+/* Footer */
+footer[role='contentinfo'] {
+    padding: 1em 0;
+    font-size: .8em;
+    font-style: italic;
+    font-weight: 300;
+    text-align: right;
+}
+
+/* Blog Articles */
+.article + .article {
+    margin-top: 4em;
+}
+.article + .article::before {
+    display: block;
+    position: relative;
+    top: -2rem;
+    height: .8rem;
+    text-align: center;
+    background: url('../images/design/separator.svg') center no-repeat;
+    background-size: contain;
+    content: '\00a0';
+}
+.article header + * {
+    margin-top: 0;
+}
+.article header time {
+    position: relative;
+    top: -1.5em;
+    left: .2em;
+    font-size: .75em;
+    font-style: italic;
+    font-weight: 300;
+}
+.article header time + a {
+    position: relative;
+    top: -1.5em;
+    margin-left: .7em;
+    font-size: .75em;
+    font-style: italic;
+}
+.article header time + a::before {
+    position: relative;
+    top: -1px;
+    padding-left: 1.1em;
+    background: url('../images/design/go-down.svg') left center no-repeat;
+    background-size: auto 1em;
+    content: '\00a0';
+}
+.article .hint::before {
+    padding-left: 1.2em;
+    background: url('../images/design/floral-bullet.svg') left center no-repeat;
+    background-size: auto .7em;
+    content: '\00a0';
+}
+.article ol {
+    list-style-type: decimal;
+}
+.article footer {
+    margin: 1.5em 0 1em;
+    font-family: Lato, sans-serif;
+    font-size: .8em;
+    font-style: italic;
+}
+.article footer dt::before {
+    display: block;
+    height: .3em;
+    content: '\00a0';
+}
+.article footer dt {
+    display: inline;
+}
+.article footer dt::after {
+    content: ':';
+}
+.article footer dd {
+    display: inline;
+    margin: 0 .1em;
+}
+.article footer a {
+    border: 0;
+    border-radius: .3em;
+    padding: .2em .5em;
+    background: #ede9e1;
+    color: #5f6f86;
+    font-weight: normal;
+    text-decoration: none;
+    transition: background-color .3s ease,
+                border-color .3s ease,
+                color .3s ease;
+}
+.article footer a:hover {
+    background: #586e75;
+    color: #ede9e1;
+}
+.article + .comments {
+    margin-top: 4em;
+}
+.article + .comments > header::before {
+    display: block;
+    position: relative;
+    top: -2rem;
+    height: .8rem;
+    text-align: center;
+    background: url('../images/design/separator.svg') center no-repeat;
+    background-size: contain;
+    content: '\00a0';
+}
+.article + .comments > header h3 {
+    display: inline-block;
+    margin-top: .2em;
+}
+.article + .comments > header a {
+    margin-left: 1rem;
+    font-size: 87%;
+}
+.article + .comments > ol {
+    margin: 0;
+    padding: 0;
+    font-size: 87%;
+}
+.article + .comments > ol > li {
+    margin: 1em 0;
+    padding-right: 4.5em;
+}
+.article + .comments > ol > li + li {
+    border-top: 1px solid #ede9e1;
+    padding-top: 1em;
+}
+.article + .comments > ol article {
+    position: relative;
+    min-height: 48px;
+    padding-left: 20%;
+}
+.article + .comments > ol header {
+    float: left;
+    margin-left: -25%;
+    box-sizing: border-box;
+    width: 25%;
+    padding-right: 1em;
+    font-size: .75rem;
+    font-style: italic;
+    font-weight: 300;
+}
+.article + .comments > ol header img {
+    position: absolute;
+    top: 0;
+    left: 102%;
+    border: 1px solid #839496;
+}
+.article + .comments > ol header span {
+    position: absolute;
+    left: -9999em;
+}
+.article + .comments > ol header time {
+    white-space: normal;
+}
+.article + .comments > ol header + * {
+    margin-top: 0 !important;
+}
+.article + .comments > ol header ~ * {
+    overflow-wrap: break-word;
+}
+.article + .comments > ol code,
+.article + .comments > ol pre {
+    font-size: 90%;
+}
+.article + .comments > ol ol {
+    list-style-type: decimal;
+}
+.article + .comments > ol + form {
+    margin-top: 2em;
+}
+.article + .comments form legend {
+    margin: 1em 0 .5em;
+    padding: 0;
+    font-family: Lato, sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.article + .comments form ol {
+    margin: 0;
+}
+.article + .comments form li {
+    padding-left: 12rem;
+}
+.article + .comments form label {
+    float: left;
+    margin-left: -12rem;
+    padding-top: .2em;
+}
+.article + .comments form input,
+.article + .comments form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    border: 2px solid transparent;
+    border-radius: .3em;
+    padding: .2em;
+    background: #ffffff;
+    color: #413d79;
+    font-size: 1rem;
+    transition: border-color .3s ease,
+                box-shadow .3s ease;
+}
+.article + .comments form input:focus,
+.article + .comments form textarea:focus {
+    box-shadow: inset 0 0 .5em rgba(0, 0, 0, .1);
+    border-color: #413d79;
+    outline: 0;
+}
+.article + .comments form input {
+    font-family: Lato, sans-serif;
+}
+.article + .comments form textarea {
+    font-family: Inconsolata, monospace;
+}
+.article + .comments form .error {
+    color: #dc322f;
+    font-size: 75%;
+    font-style: italic;
+}
+.article + .comments form fieldset.actions {
+    margin-left: 12rem;
+}
+.article + .comments form fieldset.actions p {
+    margin-top: 0;
+}
+.article + .comments form button {
+    border: 0;
+    border-radius: .3em;
+    padding: .5em 1em;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 1px 2px 0;
+    background: linear-gradient(
+        rgba(0, 0, 0, .0) 0%,
+        rgba(0, 0, 0, .0) 50%,
+        rgba(0, 0, 0, .10) 100%
+    );
+    background-color: #a39d8f;
+    color: #ede9e1;
+    font-family: Merriweather, serif;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color .3s ease,
+                background-color .3s ease,
+                border-color .3s ease;
+}
+.article + .comments form button:hover,
+.article + .comments form button:focus {
+    background: linear-gradient(
+        rgba(0, 0, 0, .0) 0%,
+        rgba(0, 0, 0, .0) 50%,
+        rgba(0, 0, 0, .30) 100%
+    );
+    background-color: #0726a6;
+    color: #eee8d5;
+    outline: 0;
+}
+
+/* Archive pages */
+.archive time {
+    font-size: .75em;
+    font-style: italic;
+    font-weight: 300;
+}
+
+/* Code Blocks */
+.codehilite {
+    overflow: auto;
+    margin: 1.75em;
+    margin-top: 1em;
+    border-top-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    padding: .5em 1em;
+}
+.codehilite + .codehilite {
+    margin-top: -.75em;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 2em;
+    font-family: Lato, sans-serif;
+    text-align: center;
+}
+.pagination a, .pagination strong {
+    border-radius: .3em;
+    padding: .2em .5em;
+    color: #657b83;
+    text-decoration: none;
+}
+.pagination strong {
+    color: #586e75;
+    font-weight: 900;
+}
+.pagination a.previous::before {
+    content: '« ';
+}
+.pagination a.next::after {
+    content: ' »';
+}
+
+/* Footnotes */
+.footnote {
+    font-size: .8em;
+    font-style: italic;
+}
+.footnote hr {
+    width: 33%;
+    margin: 1em 0 .5em;
+    border: 0;
+    border-top: 1px solid #ede9e1;
+}
+.footnote ol {
+    margin-left: 0;
+}
+.footnote li:target p {
+    margin-top: 0;
+    background: #ede9e1;
+}
+
+/* Archive Lists */
+.archive h2 b {
+    font-weight: 900;
+}
+.archive li::before {
+    position: absolute;
+    top: .3em;
+    left: -1.2em;
+    height: .85rem;
+    width: 1rem;
+    background: url('../images/design/flower.svg') left center no-repeat;
+    background-size: contain;
+    content: '\00a0';
+}
+.archive small {
+    font-size: .75em;
+    white-space: nowrap;
+}
+
+/* Small Screens */
+@media screen and (max-width: 40em) {
+    html {
+        font-size: .85rem;
+    }
+    body {
+        width: 100%;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    h3 {
+        font-size: 1.2em;
+    }
+    ol, ul {
+        margin-left: 1.5em;
+    }
+    figure {
+        margin-left: 0;
+    }
+    code {
+        font-size: 1.1em;
+    }
+    header[role='banner'] {
+        width: 100%;
+        max-width: none;
+    }
+    header[role='banner'] a,
+    header[role='banner'] h1 a {
+        padding: .4em;
+        font-size: 1.4rem;
+    }
+    main {
+        margin-top: .5em;
+        padding: 4em .5em 1em;
+    }
+    main::before, main::after {
+        content: none;
+    }
+    main :target::before {
+        height: 2.5rem;
+        margin-top: -2.5rem;
+    }
+    footer[role='contentinfo'] {
+        padding-right: .5em;
+    }
+    .codehilite {
+        margin-right: 0;
+        margin-left: 0;
+        font-size: .9em;
+    }
+    .article + .comments > ol > li {
+        padding-right: 5.5em;
+    }
+}
+
+/* Medium Screens */
+@media screen and (max-width: 60em) {
+    .article + .comments > ol article {
+        padding-left: 0;
+    }
+    .article + .comments > ol header {
+        float: none;
+        margin-left: 0;
+        margin-bottom: 1em;
+        width: auto;
+    }
+    .article + .comments > ol header span {
+        display: block;
+        overflow: hidden;
+        position: static;
+        width: 0;
+        height: 0;
+    }
+    .article + .comments > ol header span::before {
+        display: block;
+        content: '\00a0';
+        height: 1px;
+    }
+    .article + .comments form legend {
+        font-size: 1.1em;
+    }
+    .article + .comments form li {
+        padding-left: 0;
+    }
+    .article + .comments form label {
+        display: block;
+        float: none;
+        margin-left: 0;
+        padding-top: 0;
+    }
+    .article + .comments form fieldset.actions {
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="4.233mm" height="4.233mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 423 423"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:cc="http://creativecommons.org/ns#"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:svg="http://www.w3.org/2000/svg"
+ xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+ xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+ inkscape:version="0.48.4 r9939"
+ sodipodi:docname="backdrop-plain.svg">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:#B5AC98}
+    .fil0 {fill:#C2B79B}
+   ]]>
+  </style>
+ </defs>
+ <g id="Ebene_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="36.588319" inkscape:cx="4.1706417" inkscape:cy="8.5246732" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="true" showborder="true" inkscape:showpageshadow="false" inkscape:window-width="1916" inkscape:window-height="1057" inkscape:window-x="0" inkscape:window-y="19" inkscape:window-maximized="0">
+   <inkscape:grid type="xygrid" id="grid3755" empspacing="5" visible="true" enabled="true" snapvisiblegridlinesonly="true"/>
+  </sodipodi:namedview>
+  <polygon id="rect2993" class="fil0" points="0,423 423,423 423,0 0,0 "/>
+  <polygon id="rect3848" class="fil1" points="423,193 193,423 230,423 423,230 "/>
+  <polygon id="rect3791" class="fil1" points="0,18 18,0 0,0 "/>
+  <polygon id="rect2985" class="fil1" points="405,0 0,405 0,423 18,423 423,18 423,0 405,0 " inkscape:connector-curvature="0"/>
+  <polygon id="path3794" class="fil1" points="423,423 423,405 405,423 " inkscape:connector-curvature="0"/>
+  <polygon id="path3851" class="fil1" points="0,230 230,0 193,0 0,193 " inkscape:connector-curvature="0"/>
+ </g>
+</svg>
