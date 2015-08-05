@@ -210,12 +210,16 @@ def render_page(page, **kwargs):
                            **kwargs)
 
 
+def get_comment_directory_name(page):
+    return os.path.join(pages.root, page.path) + '.comments'
+
+
 def comment_directory_list(page):
     if 'comment_directory_list' not in g:
         g.comment_directory_list = {}
     if page in g.comment_directory_list:
         return g.comment_directory_list[page]
-    comment_directory = os.path.join(pages.root, page.path)
+    comment_directory = get_comment_directory_name(page)
     directory_list = []
     if os.path.isdir(comment_directory):
         directory_list = [
@@ -252,9 +256,9 @@ def validate_csrf(page):
 
 
 def post_comment(page, data):
-    comment_directory = os.path.join(pages.root, page.path)
+    comment_directory = get_comment_directory_name(page)
     if not os.path.isdir(comment_directory):
-        os.mkdir(comment_directory)
+        os.mkdir(comment_directory, 0o755)
     now = datetime.datetime.utcnow()
     filename = 'comment-{}'.format(now.strftime('%Y-%m-%d-%H.%M.%S.%f'))
     full_path = os.path.join(comment_directory, filename)
