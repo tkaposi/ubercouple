@@ -226,7 +226,7 @@ def comment_directory_list(page):
             {'path': u'/'.join((page.path, filename)),
              'file': os.path.join(root, filename)}
             for root, dirs, files in os.walk(comment_directory)
-            for filename in files
+            for filename in sorted(files)
         ]
     g.comment_directory_list[page] = directory_list
     return directory_list
