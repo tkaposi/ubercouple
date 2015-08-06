@@ -446,8 +446,16 @@ footer[role='contentinfo'] {
     border: 1px solid #839496;
 }
 .article + .comments > ol header span {
-    position: absolute;
-    left: -9999em;
+    display: block;
+    overflow: hidden;
+    position: static;
+    width: 0;
+    height: 0;
+}
+.article + .comments > ol header span::before {
+    display: block;
+    content: '\00a0';
+    height: 1px;
 }
 .article + .comments > ol header time {
     white-space: normal;
@@ -702,18 +710,6 @@ footer[role='contentinfo'] {
         margin-left: 0;
         margin-bottom: 1em;
         width: auto;
-    }
-    .article + .comments > ol header span {
-        display: block;
-        overflow: hidden;
-        position: static;
-        width: 0;
-        height: 0;
-    }
-    .article + .comments > ol header span::before {
-        display: block;
-        content: '\00a0';
-        height: 1px;
     }
     .article + .comments form legend {
         font-size: 1.1em;
