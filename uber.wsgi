@@ -279,10 +279,15 @@ def post_comment(page, data):
 
 
 def blog_articles():
+    def _article_sort_key(article):
+        published = article.meta['published']
+        if isinstance(published, datetime.date):
+            published = datetime.datetime.combine(published, datetime.time())
+        return published
     # Blog articles are pages with a publication date
     articles = (page for page in pages
                 if 'published' in page.meta and not page.meta.get('draft'))
-    return reversed(sorted(articles, key=lambda a: a.meta['published']))
+    return reversed(sorted(articles, key=_article_sort_key))
 
 
 def paginate(items, page, per_page):
