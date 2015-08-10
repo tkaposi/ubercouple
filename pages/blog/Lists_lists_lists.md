@@ -1,5 +1,5 @@
 title: 'Lists, lists, lists'
-published: 2015-08-10 00:20
+published: 2015-08-10 00:20:00
 tags: [preparation]
 
 As we mentioned doing organizational stuff in the last post here's a little something about that.
