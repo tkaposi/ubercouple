@@ -281,7 +281,7 @@ def post_comment(page, data):
 def blog_articles():
     def _article_sort_key(article):
         published = article.meta['published']
-        if isinstance(published, datetime.date):
+        if not isinstance(published, datetime.datetime):
             published = datetime.datetime.combine(published, datetime.time())
         return published
     # Blog articles are pages with a publication date
